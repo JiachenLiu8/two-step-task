@@ -1,0 +1,32 @@
+run-title: TwoStep_JL
+seed: 102
+save-path: ckpt
+save-interval: 30_000
+resume: false
+start-episode: 20_000
+train: false
+test: true
+
+task:
+  common-prob: 0.8
+  reward-prob: 0.8
+  switch-prob: 0.02
+  ambiguity: 0
+  safebet-reward: 0
+
+  
+  trials-per-epi: 600
+  train-episodes: 100
+  test-episodes: 200
+
+a2c:
+  mem-units: 128
+  
+  value-loss-weight: 0.05
+  entropy-weight: 0.05
+  max-grad-norm: 999.
+  
+  gamma: 1
+  lr: 7.e-4
+  weight-decay: 0
+
